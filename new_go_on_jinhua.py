@@ -221,7 +221,7 @@ while True:
         if strategy.account < 10000:
             continue
         if strategy.equity < 10000:
-            continue
+            continu
         if strategy.balance < 10000:
             continue
         # #赚钱则存储，4为终值，5为交易笔数
@@ -238,7 +238,7 @@ while True:
         zhongduan = input("是否继续执行进化？yes/no")
         if zhongduan == "no":
             today = datetime.date.today()
-            new_address = '//media//zhangkun//资料//exchange//AUDUSD//AUDUSDcelue' + \
+            new_address = '//media//zhangkun//000FB948000CC321//exchange//AUDUSD//AUDUSDcelue' + \
                           str(today.year) + str(today.month) + str(today.day) + '_1.txt'
             my_list4 = open(new_address, 'wb')
             pickle.dump(short_program, my_list4)

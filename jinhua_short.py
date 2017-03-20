@@ -3,7 +3,7 @@ import random
 import pickle
 import datetime
 from numpy import *
-my_list2=open('//media//zhangkun//000FB948000CC321//exchange//AUDUSD//AUDUSD5min.txt','rb')
+my_list2=open('//media//zhangkun//资料//exchange//AUDUSD//AUDUSD5min.txt','rb')
 # my_list3数据结构<DTYYYYMMDD>,<TIME>,<OPEN>,<HIGH>,<LOW>,<CLOSE>
 my_list3=pickle.load(my_list2)
 my_list2.close()
@@ -164,7 +164,7 @@ short_program=[[0,0,0,0,0,0]]#0波动、1手数、2盈利点、3止损点、4最
 a=0
 while True:
     #随机取值
-    short_program[a][0] = random.randint(1,100)
+    short_program[a][0] = random.randint(1,80)
     short_program[a][1] = random.randint(100, 100000)
     short_program[a][2] = random.randint(1, 1000)
     short_program[a][3] = random.randint(1, 1000)
@@ -187,7 +187,7 @@ while True:
         for each in short_program:
             print(each)
         today = datetime.date.today()
-        new_address = '//media//zhangkun//000FB948000CC321//exchange//AUDUSD//AUDUSDcelue' + str(today.year) + str(
+        new_address = '//media//zhangkun//资料//exchange//AUDUSD//AUDUSDcelue' + str(today.year) + str(
             today.month) + str(today.day) + '.txt'
 
         my_list4 = open(new_address, 'wb')
@@ -199,7 +199,7 @@ while True:
         short_program=sorted(short_program,key=lambda program:program[4],reverse=True)
         print(short_program[:10])
         today = datetime.date.today()
-        new_address = '//media//zhangkun//000FB948000CC321//exchange//AUDUSD//AUDUSDcelue' + str(today.year) + str(
+        new_address = '//media//zhangkun//资料//exchange//AUDUSD//AUDUSDcelue' + str(today.year) + str(
             today.month) + str(today.day) + '.txt'
 
         my_list4 = open(new_address, 'wb')
@@ -232,7 +232,7 @@ while True:
         a += 1
     else:
         # 随机取值
-        short_program[a][0] = random.randint(1, 100)
+        short_program[a][0] = random.randint(1, 80)
         short_program[a][1] = random.randint(100, 100000)
         short_program[a][2] = random.randint(1, 1000)
         short_program[a][3] = random.randint(1, 1000)
@@ -258,7 +258,7 @@ while True:
         zhongduan=input("是否继续执行进化？yes/no")
         if zhongduan=="no":
             today = datetime.date.today()
-            new_address = '//media//zhangkun//000FB948000CC321//exchange//AUDUSD//AUDUSDcelue' + str(today.year) + str(
+            new_address = '//media//zhangkun//资料//exchange//AUDUSD//AUDUSDcelue' + str(today.year) + str(
                 today.month) + str(today.day) + '.txt'
 
             my_list4 = open(new_address, 'wb')
