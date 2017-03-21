@@ -186,9 +186,9 @@ my_list4 = open(new_address, 'wb')
 pickle.dump(short_program, my_list4)
 my_list4.close()
 
-#for each in short_program:
-#    print(each)
-#print(len(short_program))
+for each in short_program:
+    print(each)
+print(len(short_program))
 
 
 # today = datetime.date.today()
